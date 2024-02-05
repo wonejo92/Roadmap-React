@@ -55,7 +55,7 @@ console.log(getUserS())
 
 // Practicing
 // 1. Change this function to arrow function
-// 2. Must have return implicit object
+// 2. Should return an implicit object
 // 3. Testing
 function getActiveUser(name){
     return{
