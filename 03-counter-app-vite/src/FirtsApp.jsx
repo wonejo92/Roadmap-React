@@ -15,3 +15,10 @@ FirtsApp.propTypes = {
   subTitle: PropTypes.string.isRequired,
   numbers: PropTypes.number.isRequired
 }
+
+FirtsApp.defaultProps = {
+  title:"Default Title",
+  subTitle:"PropTypes",
+  numbers:22,
+  name: "KEVIN CORDERO"
+}
