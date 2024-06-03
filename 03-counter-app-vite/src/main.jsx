@@ -8,6 +8,6 @@ import './styles.css';
 
 reactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <FirtsApp/>
+        <FirtsApp title="Kevin Cordero" subTitle="PropTypes" numbers={92}/>
     </React.StrictMode>
 )

@@ -1,9 +1,17 @@
+import PropTypes from "prop-types";
 
-export const FirtsApp = () => {
+export const FirtsApp = ({title,subTitle,numbers}) => {
   return (
     <>
-    <code>Wonejo</code>
-    <p>92</p>
+    <h1>{title}</h1>
+    <p>{subTitle}</p>
+    <p>{numbers+10}</p>
     </>
   )
+}
+
+FirtsApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+  numbers: PropTypes.number.isRequired
 }
