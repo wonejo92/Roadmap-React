@@ -10,6 +10,6 @@ import {CounterApp} from "./CounterApp.jsx";
 reactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         {/*<FirtsApp title="Kevin Cordero" subTitle="PropTypes" numbers={92}/>*/}
-        <CounterApp value={0}/>
+        <CounterApp value={10}/>
     </React.StrictMode>
 )
