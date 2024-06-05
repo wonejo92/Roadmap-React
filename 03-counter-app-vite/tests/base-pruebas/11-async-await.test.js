@@ -2,9 +2,9 @@ import {getImagen} from "../../src/base-pruebas/11-async-await.js";
 
 describe('Test of 11-async-await', () => {
 
-    test('getImagen returns image url', async () => {
-        const url=await getImagen();
-        console.log(url);
-        expect(typeof url).toBe('string');
+    test('getImagen returns error', async () => {
+        const resp=await getImagen();
+        console.log(resp);
+        expect(resp).toBe('Image not found');
     })
 })
