@@ -1,22 +1,23 @@
 import PropTypes from "prop-types";
 
-export const FirtsApp = ({title,subTitle,numbers}) => {
+export const FirstApp = ({title,subTitle,numbers}) => {
   return (
     <>
-    <h1>{title}</h1>
+    <h1 data-testid="test-title">{title}</h1>
+    <p>{subTitle}</p>
     <p>{subTitle}</p>
     <p>{numbers+10}</p>
     </>
   )
 }
 
-FirtsApp.propTypes = {
+FirstApp.propTypes = {
   title: PropTypes.string.isRequired,
   subTitle: PropTypes.string.isRequired,
   numbers: PropTypes.number.isRequired
 }
 
-FirtsApp.defaultProps = {
+FirstApp.defaultProps = {
   title:"Default Title",
   subTitle:"PropTypes",
   numbers:22,
