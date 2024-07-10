@@ -1,10 +1,13 @@
 import {useState} from "react";
 import {AddCategory} from "./Components/AddCategory.jsx";
+import {GifGrid} from "./Components/GifGrid.jsx";
 export const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState(['One Punch','One Piece']);
+    const [categories, setCategories] = useState(['One Punch']);
 
     const onAddCategory = (newCategory) => {
+        // Validate the category
+        if (categories.includes(newCategory.toLowerCase()) ) return;
         console.log(newCategory);
         // Una forma de insertar una categoria en la lista
         setCategories([newCategory,...categories])
@@ -13,23 +16,18 @@ export const GifExpertApp = () => {
     }
     return(
         <>
-            {/*Titulo*/}
         <h1>GifExpertApp</h1>
 
-            {/*Input*/}
             <AddCategory
-                // setCategories={setCategories}
                 onNewCategory={value=>onAddCategory(value)}
             />
-
-            {/*Listados de gifs*/}
-            <ol>
-                {/*Permite Mostrar el listado de categorias en la pagina web*/}
-                {categories.map(category => {
-                    return <li key={category}>{category}</li>
-                })}
-            </ol>
-            {/*    Gif Iten*/}
+            {
+                categories.map(category => (
+                    <GifGrid
+                        key={category}
+                        category={category}/>
+                    ))
+            }
         </>
     )
 }
